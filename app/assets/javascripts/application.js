@@ -13,3 +13,17 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelectorAll(".edit_task");
+
+  console.log(form)
+
+  form.forEach((element) => {
+    const check_box = document.querySelector(`#${element.id} #task_completed`)
+    console.log(check_box)
+    check_box.addEventListener("click", () => {
+      element.submit();
+    })
+  })
+})
